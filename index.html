@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ar=[10,10,10,10,20,30,30,30,30,30,30,30,40,40,40,40,40];
+
+        function socks(ar){
+        ar.sort(function(a, b){
+           return a - b;       //  sorting the array  
+    });
+
+
+    var counter = 0;
+    for(var i=0; i<ar.length; i++){
+        if(ar[i] === ar[i+1]){
+            counter++;
+            i++;    
+        }
+    }
+    return counter;
+}
+console.log("the total number of matching pairs of socks that Rohit can sell=",socks(ar));
+    </script>
+</body>
+</html>
